@@ -12,18 +12,23 @@
         <div class="row">
 
           <div class="col-xs-12">
-            <a href="#" class="list-group-item clearfix">
+            <a href="#" 
+            class="list-group-item clearfix" 
+            *ngFor="let contact of contacts">
                 <div class="pull-left">
-                    <h4 class="list-group-item-heading">Contact Name</h4>
-                    <p class="lsit-group-item-text">Description of the Contact</p>
+                    <h4 class="list-group-item-heading">{{ contact.name}}</h4>
+                    
+                    <p class="lsit-group-item-text"></p>
                 </div>
                 <span class="pull-right">
-                    <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+                    <img src="{{ contact.imgUrl }}" alt="" class="img-responsive" style="max-height: 50px;">
                 </span>
             </a>
+
+            
             <app-contact-item></app-contact-item>
           </div>
-          
+
         </div>
 
    
