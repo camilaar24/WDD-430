@@ -8,11 +8,11 @@ import { Contact } from '../contact.model';
 })
 export class ContactItemComponent implements OnInit {
   
-  contact: Contact[] = [];
+  @Input()
+  contact!: Contact;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
