@@ -19,7 +19,7 @@ import {
       subject!: ElementRef;
     @ViewChild('msgText')
       msgText!: ElementRef;
-    currentSender: string = 'Seth';
+    currentSender: string = 'Camila';
   
     constructor() {}
   

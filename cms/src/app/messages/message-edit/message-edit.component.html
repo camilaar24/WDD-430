@@ -31,11 +31,13 @@
             <button
               class="btn btn-success"
               type="submit"
-              (click)="onSendMessage(); $event.stopPropagation()"
-            >
+              (click)="onSendMessage(); $event.stopPropagation()">
               Send
             </button>
-            <button class="btn btn-danger" type="button" (click)="onClear()">
+            <button 
+            class="btn btn-danger" 
+            type="button" 
+            (click)="onClear()">
               Clear
             </button>
           </div>
