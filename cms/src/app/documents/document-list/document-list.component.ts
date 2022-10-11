@@ -12,10 +12,10 @@ export class DocumentListComponent implements OnInit {
   
   documents = [
     new Document('1', 'Test 1', 'This is a test 1.', 'https://www.example.com/'),
-    new Document('2', 'Test 2', 'This is test 2.', 'https://www.example.com/2'),
-    new Document('3', 'Test 3', 'This is test 3.', 'https://www.example.com/3'),
-    new Document('4', 'Test 4', 'This is test 4.', 'https://www.example.com/4'),
-    new Document('5', 'Test 5', 'This is test 5.', 'https://www.example.com/5'),
+    new Document('2', 'Test 2', 'This is test 2.', 'https://www.example.com/'),
+    new Document('3', 'Test 3', 'This is test 3.', 'https://www.example.com/'),
+    new Document('4', 'Test 4', 'This is test 4.', 'https://www.example.com/'),
+    new Document('5', 'Test 5', 'This is test 5.', 'https://www.example.com/'),
   ];
 
   constructor() {}
