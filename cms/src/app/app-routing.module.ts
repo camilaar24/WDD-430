@@ -1,35 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
-
-
-import { ContactsComponent } from './contacts/contacts.component';
-import { DocumentDetailComponent } from './documents/document-detail/document-detail.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { MessageListComponent } from './messages/message-list/message-list.component';
+import { ContactsComponent } from './contacts/contacts.component';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/documents', pathMatch: 'full' },
-  {
-    path: 'documents',
-    component: DocumentsComponent,
-    children: [
-      
-      { path: ':id', component: DocumentDetailComponent },
-     
-    ],
-  },
+  
+  { path: 'documents', component: DocumentsComponent },
   { path: 'messages', component: MessageListComponent },
-  {
-    path: 'contacts',
-    component: ContactsComponent,
-    children: [
-     
-      { path: ':id', component: ContactDetailComponent },
-      
-    ],
-  },
-];
+  { path: 'contacts', component: ContactsComponent },
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
