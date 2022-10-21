@@ -1,29 +1,30 @@
-
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h4>{{ contact.name }}</h4>
-		<div class="row">
-			<span class="col-xs-6 vcenter">
-				<img [src]="contact.imageUrl " alt="contact.name" class="img-responsive" style="max-height: 100px;">
-			</span>
-
-			<span class="pull-right btn-toolbar" style="margin-top: 60px; margin-right: 15px">
-				<a class="btn btn-primary">Edit</a>
-				<a class="btn btn-danger">Delete</a>
-			</span>
-		</div>
-	</div>
-    <div class="panel-body">
-		<div class="row">
-			<div class="col-xs-12">
-				<p>Email: {{ contact.email }} </p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<p>Phone: {{ contact.phone }} </p>
-			</div>
-		</div>
-	
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>{{ contact.name }}</h3>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-xs-6 vcenter">
+        <img [src]="contact.imageUrl" [alt]="contact.name" height="90px" />
+      </div>
+      <div class="col-xs-6 vcenter">
+        <a class="btn btn-primary btn-sm" routerLink="edit">Edit</a>
+        <a class="btn btn-danger btn-sm" (click)="onDelete()">Delete</a>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><strong>Email:</strong> {{ contact.email }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><strong>Phone:</strong> {{ contact.phone }}</p>
+      </div>
+    </div>
+  </div>
 </div>
