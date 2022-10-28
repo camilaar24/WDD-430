@@ -26,14 +26,6 @@ export class ContactService {
     return this.contacts.find((c) => c.id === id);
   }
 
-  deleteContact(contact: Contact) {
-    if (!contact) return;
-    const pos = this.contacts.indexOf(contact);
-    if (pos < 0) return;
-    this.contacts.splice(pos, 1);
-    this.contactListChangedEvent.next(this.contacts.slice());
-  }
-
   getMaxId(): number {
     let maxId = 0;
     this.contacts.forEach((c) => {
@@ -64,6 +56,14 @@ export class ContactService {
 
     newContact.id = original.id;
     this.contacts[pos] = newContact;
+    this.contactListChangedEvent.next(this.contacts.slice());
+  }
+
+  deleteContact(contact: Contact) {
+    if (!contact) return;
+    const pos = this.contacts.indexOf(contact);
+    if (pos < 0) return;
+    this.contacts.splice(pos, 1);
     this.contactListChangedEvent.next(this.contacts.slice());
   }
 }
