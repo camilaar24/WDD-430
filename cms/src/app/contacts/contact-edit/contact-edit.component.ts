@@ -15,6 +15,7 @@ export class ContactEditComponent implements OnInit {
   groupContacts: Contact[] = [];
   editMode: boolean = false;
   id: string;
+  invalidGroupContact: boolean;
 
   constructor(
     private contactService: ContactService,
@@ -65,10 +66,13 @@ export class ContactEditComponent implements OnInit {
 
   /* DRAG AND DROP METHODS */
   addToGroup($event: any) {
-    const selectedContact: Contact = $event.dragData;
-    if (this.isInvalidContact(selectedContact)) return;
-    this.groupContacts.push(selectedContact);
-  }
+		const selectedContact: Contact = $event.dragData;
+		this.invalidGroupContact = this.isInvalidContact(selectedContact);
+		if (this.invalidGroupContact) {
+			return;}
+		this.groupContacts.push(selectedContact);
+		this.invalidGroupContact = false;
+	}
 
   isInvalidContact(newContact: Contact) {
     if (!newContact) return true;
@@ -79,5 +83,6 @@ export class ContactEditComponent implements OnInit {
   onRemoveItem(index: number) {
     if (index < 0 || index >= this.groupContacts.length) return;
     this.groupContacts.splice(index, 1);
+    this.invalidGroupContact = false;
   }
 }

@@ -87,6 +87,8 @@
               [dropZones]="['contactGroup']"
               (onDropSuccess)="addToGroup($event)"
             >
+            <div class="alert alert-danger" *ngIf="invalidGroupContact">Contact cannot be added to the group. It is
+						already in group or is the current contact.</div>
               <div *ngFor="let contact of groupContacts; let i = index">
                 <div>
                   <app-contact-item
@@ -110,8 +112,7 @@
   
         <div
           class="alert alert-danger"
-          *ngIf="(!name.valid && name.touched) || (!email.valid && email.touched)"
-        >
+          *ngIf="(!name.valid && name.touched) || (!email.valid && email.touched)">
           The Name and Email fields are required.
         </div>
   
