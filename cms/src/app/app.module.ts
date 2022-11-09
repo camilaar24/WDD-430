@@ -20,6 +20,7 @@ import { DropdownDirective } from './header/dropdown.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { DndModule } from 'ng2-dnd';
+import { ContactsFilterPipe } from './contacts/contacts-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { DndModule } from 'ng2-dnd';
     DropdownDirective,
     DocumentEditComponent,
     ContactEditComponent,
+    ContactsFilterPipe,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, DndModule.forRoot()],
   providers: [],
