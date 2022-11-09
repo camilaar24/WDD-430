@@ -14,9 +14,9 @@ export class ContactsFilterPipe implements PipeTransform {
     );
   }
   if (filteredArray.length < 1) {
-    return contacts;
+      return contacts;
+    }
+    return filteredArray;
   }
-  return filteredArray;
-}
 
 }
