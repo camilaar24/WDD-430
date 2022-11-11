@@ -12,7 +12,7 @@ export class ContactService {
 
   private contacts: Contact[] = [];
   private maxContactId: number;
-  private contactsUrl = 'https://cms-cg-default-rtdb.firebaseio.com/documents/contacts.json';
+  private contactsUrl = 'https://cms-cg-default-rtdb.firebaseio.com/contacts.json';
 
   constructor(private http: HttpClient) {}
 
