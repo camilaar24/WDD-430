@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
     })
     .catch((err) => {
       res.status(500).json({
-        message: "There was a problem reng trieving contacts from the database.",
+        message: "There was a problem retrieving contacts from the database.",
         error: err,
       });
     });
