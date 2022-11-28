@@ -18,7 +18,7 @@ import { MessageService } from '../message.service';
     onSendMessage() {
       const subject = this.subject.nativeElement.value;
       const msgText = this.msgText.nativeElement.value;
-      const message = new Message('1', subject, msgText, '5');
+      const message = new Message(subject, msgText, '');
       this.messageService.addMessage(message);
     }
   
