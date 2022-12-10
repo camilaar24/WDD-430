@@ -53,7 +53,7 @@ app.use('/contacts', contactRoutes);
 app.use('/documents', documentRoutes);
 
 // establish a connection to the mongo database
-mongoose.connect('mongodb://localhost:27017/cms',
+mongoose.connect('mongodb+srv://camilaar:camilaar24.@cluster0.a63dcom.mongodb.net/?retryWrites=true&w=majority',
    { useNewUrlParser: true, family: 4 }, (err, res) => {
       if (err) {
          console.log('Connection failed: ' + err);

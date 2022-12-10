@@ -6,7 +6,8 @@ var maxContactId;
 var sequenceId = null;
 
 function SequenceGenerator() {
-  Sequence.findOne().exec(function (err, sequence) {
+  Sequence.findOne()
+  .exec(function (err, sequence) {
     if (err) {
       return res.status(500).json({
         title: "An error occurred",
